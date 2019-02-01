@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Simple JSON example</title>
+		<style></style>
+	</head>
+	
+	<body>
+		<p>Accessing a JSON array for the street name with AJAX</p>
+		<p id="insert1">Text goes here</p>
+		
+		<script>
+			var person={
+				"name": "Brad",
+				"age":38,
+				"address":{"street":"5 Main St", "city":"Boston"},
+				"Confirm":"True"
+			};
+			x = person.name + ": " + person.address.street;
+			document.getElementById("insert1").innerHTML = x;
+			//----------------------------------------------------------------
+			//Modifying name from Brad to Graham
+			person.name="Graham";
+			console.log(person); //Output to console.
+		</script>	
+	</body>
+</html>

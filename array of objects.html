@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>JSON array of objects output to screen and console</title>
+		<style></style>
+	</head>
+	
+	<body>
+		<p>Name and Age retrieved from the JSON array of objects</p>
+		
+		<ul id="people">Output data will go here</ul>
+		
+		<script>
+			var people=[
+				{
+				"name":"Brad",
+				"age":"38"
+				},
+				{
+				"name":"June",
+				"age":"21"
+				},
+				{
+				"name":"Fred",
+				"age":"59"
+				}
+			];
+			
+			var output='';											  //declaring the variable
+			
+			for(var i=0; i<people.length; i++){			
+			output += '<li>'+people[i].name+' '+people[i].age+'</li>';//appending data to the variable "output"
+			console.log(people[i]);
+			}
+			
+			document.getElementById("people").innerHTML = output;	  /*inserting data from the variable "output" 
+																		into the UL named people*/
+			
+		</script>
+	</body>
+</html>
